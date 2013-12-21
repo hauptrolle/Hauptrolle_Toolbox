@@ -1,0 +1,6 @@
+app/code/community/Hauptrolle/Toolbox/ app/code/community/Hauptrolle/Toolbox/
+app/design/frontend/base/default/layout/hauptrolle_toolbox.xml app/design/frontend/base/default/layout/hauptrolle_toolbox.xml
+app/design/frontend/base/default/template/hauptrolle/toolbox app/design/frontend/base/default/template/hauptrolle/toolbox
+app/etc/modules/Hauptrolle_Toolbox.xml app/etc/modules/Hauptrolle_Toolbox.xml
+skin/frontend/base/default/css/hauptrolle_toolbox.css skin/frontend/base/default/css/hauptrolle_toolbox.css
+skin/frontend/base/default/js/hauptrolle_toolbox.js skin/frontend/base/default/js/hauptrolle_toolbox.js

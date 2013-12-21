@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hauptrolle_Toolbox>
+            <version>1.0.0</version>
+        </Hauptrolle_Toolbox>
+    </modules>
+
+    <frontend>
+        <layout>
+            <updates>
+                <hauptrolle_toolbox>
+                    <file>hauptrolle_toolbox.xml</file>
+                </hauptrolle_toolbox>
+            </updates>
+        </layout>
+        <routers>
+            <Hauptrolle_Toolbox>
+                <use>standard</use>
+                <args>
+                    <module>Hauptrolle_Toolbox</module>
+                    <frontName>toolbox</frontName>
+                </args>
+            </Hauptrolle_Toolbox>
+        </routers>
+    </frontend>
+</config>

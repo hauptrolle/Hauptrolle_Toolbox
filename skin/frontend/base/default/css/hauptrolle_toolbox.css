@@ -1,0 +1,50 @@
+#hauptrolle__toolbox {
+    -webkit-font-smoothing: antialiased;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    text-align: left;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.25);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#hauptrolle__toolbox ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#hauptrolle__toolbox a {
+    color: #E45252;
+    text-decoration: none;
+}
+#hauptrolle__toolbox a:hover {
+    text-decoration: underline;
+}
+.toolbox__section li {
+    padding-left: 10px;
+}
+.toolbox__section li:before {
+    content: '- ';
+}
+.toolbox__section li:first-child {
+    font-weight: bold;
+    padding-left: 0;
+}
+.toolbox__section li:first-child:before {
+    content: "";
+}
+.toolbox__section {
+    margin: 0px -10px 10px -10px;
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid #f3f3f3;
+}
+.toolbox__section:first-child {
+    padding-top: 0;
+}
+.toolbox__section:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

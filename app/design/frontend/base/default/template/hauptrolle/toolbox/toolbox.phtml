@@ -1,0 +1,36 @@
+<div id="hauptrolle__toolbox">
+    <div class="toolbox__section toolbox__layout-handles">
+        <?php $layoutArray = $this->getLayout()->getUpdate()->getHandles(); ?>
+        <ul>
+            <li>Layout Handles</li>
+            <?php foreach ($layoutArray as $handle => $handleValue): ?>
+                <li><?php echo $handleValue; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <div class="toolbox__section toolbox_theme">
+        <ul>
+            <li>Design</li>
+            <li>Package: <?php echo Mage::getDesign()->getPackageName(); ?></li>
+            <li>Theme: <?php echo Mage::getDesign()->getTheme('frontend'); ?></li>
+            <li>jQuery: <span id="jquery-loaded"></span></li>
+            <li>Module: <?php echo Mage::app()->getFrontController()->getRequest()->getModuleName(); ?></li>
+            <li>Action: <?php echo $this->getRequest()->getActionName(); ?></li>
+            <li>Controller: <?php echo $this->getRequest()->getControllerName(); ?></li>
+        </ul>
+    </div>
+    <div class="toolbox__section toolbox_store-info">
+        <ul>
+            <li>Store Informations</li>
+            <li>Store Id: <?php echo Mage::app()->getStore()->getStoreId(); ?></li>
+            <li>Store Name: <?php echo Mage::app()->getStore()->getName(); ?></li>
+        </ul>
+    </div>
+    <div class="toolbox__section toolbox_stuff">
+        <ul>
+            <li>Stuff</li>
+            <li><a href="<?php Mage::getUrl('') ?>toolbox/index/clearcache">Clear Cache</a></li>
+            <li><a href="<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/index/index'); ?>" target="blank">Goto Backend</a></li>
+        </ul>
+    </div>
+</div>
