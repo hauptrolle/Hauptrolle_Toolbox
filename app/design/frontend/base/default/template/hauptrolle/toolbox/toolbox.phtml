@@ -34,12 +34,13 @@
             <li>Stuff</li>
             <li><a href="<?php Mage::getUrl('') ?>toolbox/index/clearcache">Clear Cache</a></li>
             <li><a href="<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/index/index'); ?>" target="blank">Goto Backend</a></li>
+            <?php /*
             <?php $route = Mage::app()->getRequest()->getRouteName(); ?>
             <?php if($route == "cms"): ?>
                 <?php $pageId = Mage::getBlockSingleton('cms/page')->getPage()->getId(); ?>
-
                 <li><a target="_blank" href="<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/cms_page/edit', array('page_id' => $pageId)) ?>">Edit CMS Page</a></li>
             <?php endif; ?>
+            */ ?>
         </ul>
     </div>
 </div>
