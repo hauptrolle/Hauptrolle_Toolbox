@@ -12,7 +12,10 @@
         <ul>
             <li>Design</li>
             <li>Package: <?php echo Mage::getDesign()->getPackageName(); ?></li>
-            <li>Theme: <?php echo Mage::getDesign()->getTheme('frontend'); ?></li>
+            <li>Locale: <?php echo Mage::getDesign()->getTheme('locale') ?></li>
+            <li>Layout: <?php echo Mage::getDesign()->getTheme('layout') ?></li>
+            <li>Template: <?php echo Mage::getDesign()->getTheme('template') ?></li>
+            <li>Skin: <?php echo Mage::getDesign()->getTheme('skin') ?></li>
             <li>jQuery: <span id="jquery-loaded"></span></li>
             <li>Module: <?php echo Mage::app()->getFrontController()->getRequest()->getModuleName(); ?></li>
             <li>Action: <?php echo $this->getRequest()->getActionName(); ?></li>
@@ -31,6 +34,12 @@
             <li>Stuff</li>
             <li><a href="<?php Mage::getUrl('') ?>toolbox/index/clearcache">Clear Cache</a></li>
             <li><a href="<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/index/index'); ?>" target="blank">Goto Backend</a></li>
+            <?php $route = Mage::app()->getRequest()->getRouteName(); ?>
+            <?php if($route == "cms"): ?>
+                <?php $pageId = Mage::getBlockSingleton('cms/page')->getPage()->getId(); ?>
+
+                <li><a target="_blank" href="<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/cms_page/edit', array('page_id' => $pageId)) ?>">Edit CMS Page</a></li>
+            <?php endif; ?>
         </ul>
     </div>
 </div>
