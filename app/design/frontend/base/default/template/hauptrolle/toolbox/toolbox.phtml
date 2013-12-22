@@ -1,4 +1,7 @@
 <div id="hauptrolle__toolbox">
+    <div id="hauptrolle__toogle">
+        <span>T</span>
+    </div>
     <div class="toolbox__section toolbox__layout-handles">
         <?php $layoutArray = $this->getLayout()->getUpdate()->getHandles(); ?>
         <ul>
@@ -31,7 +34,6 @@
     </div>
     <div class="toolbox__section toolbox_stuff">
         <ul>
-            <li>Stuff</li>
             <li><a href="<?php Mage::getUrl('') ?>toolbox/index/clearcache">Clear Cache</a></li>
             <li><a href="<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/index/index'); ?>" target="blank">Goto Backend</a></li>
             <?php /*

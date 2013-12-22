@@ -2,14 +2,16 @@
     -webkit-font-smoothing: antialiased;
     font-size: 13px;
     position: fixed;
-    left: 0;
-    top: 50%;
+    left: -250px;
+    top: 0;
+    width: 230px;
+    height: 100%;
     text-align: left;
     padding: 10px;
-    background: #fff;
-    box-shadow: 0 0 8px rgba(0,0,0,.25);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background: #31302B;
+    color: #CAC3B4;
+    transition: all .3s ease-in-out;
+    z-index: 99;
 }
 #hauptrolle__toolbox ul {
     margin: 0;
@@ -17,11 +19,14 @@
     list-style: none;
 }
 #hauptrolle__toolbox a {
+    display: block;
+    margin: 0 -10px;
+    padding: 8px 10px;
     color: #E45252;
     text-decoration: none;
 }
 #hauptrolle__toolbox a:hover {
-    text-decoration: underline;
+    background: #22211E;
 }
 .toolbox__section li {
     padding-left: 10px;
@@ -39,7 +44,7 @@
 .toolbox__section {
     margin: 0px -10px 10px -10px;
     padding: 0 10px 10px 10px;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid #676056;
 }
 .toolbox__section:first-child {
     padding-top: 0;
@@ -48,4 +53,27 @@
     border-bottom: 0;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+#hauptrolle__toogle {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background: #E45252;
+    display: table;
+    text-align: center;
+    cursor: pointer;
+}
+#hauptrolle__toogle span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+.toolbox_stuff li:first-child, .toolbox_stuff li, .toolbox_stuff li:before {
+    font-weight: normal;
+    padding-left: 0;
+    content: "";
 }
