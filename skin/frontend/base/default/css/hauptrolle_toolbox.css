@@ -8,8 +8,8 @@
     height: 100%;
     text-align: left;
     padding: 10px;
-    background: #31302B;
-    color: #CAC3B4;
+    background: #34495E;
+    color: #ECF0F1;
     transition: all .3s ease-in-out;
     z-index: 99;
 }
@@ -22,11 +22,11 @@
     display: block;
     margin: 0 -10px;
     padding: 8px 10px;
-    color: #E45252;
+    color: #ECF0F1;
     text-decoration: none;
 }
 #hauptrolle__toolbox a:hover {
-    background: #22211E;
+    background: #2c3e50;
 }
 .toolbox__section li {
     padding-left: 10px;
@@ -44,7 +44,7 @@
 .toolbox__section {
     margin: 0px -10px 10px -10px;
     padding: 0 10px 10px 10px;
-    border-bottom: 1px solid #676056;
+    border-bottom: 1px solid #2c3e50;
 }
 .toolbox__section:first-child {
     padding-top: 0;
