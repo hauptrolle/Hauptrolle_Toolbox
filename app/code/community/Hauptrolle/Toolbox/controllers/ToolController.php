@@ -1,5 +1,5 @@
 <?php
-class Hauptrolle_Toolbox_IndexController extends Mage_Core_Controller_Front_Action
+class Hauptrolle_Toolbox_ToolController extends Mage_Core_Controller_Front_Action
 {
     public function clearCacheAction()
     {
