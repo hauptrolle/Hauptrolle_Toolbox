@@ -11,15 +11,12 @@ class Hauptrolle_Toolbox_IndexController extends Mage_Core_Controller_Front_Acti
     public function toggleTemplateHintsAction()
     {
         if(Mage::getStoreConfig('dev/debug/template_hints') == 0) {
-            $write = Mage::getSingleton('core/resource')->getConnection('core_write');
-            $write->query("UPDATE core_config_data SET value = 1 WHERE scope='websites' AND scope_id = 1 AND path ='dev/debug/template_hints'");
+            Mage::getModel('core/config')->saveConfig('dev/debug/template_hints', 1, 'stores', 1);
         }
         else {
-            $write = Mage::getSingleton('core/resource')->getConnection('core_write');
-            $write->query("UPDATE core_config_data SET value = 0 WHERE scope='websites' AND scope_id = 1 AND path ='dev/debug/template_hints'");
+            Mage::getModel('core/config')->saveConfig('dev/debug/template_hints', 0, 'stores', 1);
         }
-        Mage::app()->getCacheInstance()->flush();
+        Mage::getConfig()->cleanCache();
         $this->_redirectReferer();
-
     }
 }
